@@ -25,7 +25,7 @@ namespace MovimentacoesBancarias
                 }
 
                 _servMovimentos.RegistrarEntradas(movimentosDto);
-                return Created("Entrada registrada com sucesso");
+                return Created("Entrada registrada com sucesso", movimentosDto);
             }
             catch (Exception e)
             {
@@ -44,7 +44,7 @@ namespace MovimentacoesBancarias
                 }
 
                 _servMovimentos.RegistrarSaidas(movimentosDto);
-                return Created("Saida registrada com sucesso");
+                return Created("Saida registrada com sucesso", movimentosDto);
             }
             catch (Exception e)
             {
